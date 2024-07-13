@@ -9,7 +9,7 @@ import * as Yup from "yup";
 function App() {
   const [contacts, setContacts] = useState(() => {
     const savedData = JSON.parse(window.localStorage.getItem("savedContact"));
-    if (savedData.length) {
+    if (savedData) {
       return savedData;
     }
     return [
